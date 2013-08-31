@@ -41,17 +41,17 @@ class ProductsControllerTest < ActionController::TestCase
   # ...
 
   test "should show product" do
-    get :show, id: @product
+    get :show, id: @product.to_param
     assert_response :success
   end
 
   test "should get edit" do
-    get :edit, id: @product
+    get :edit, id: @product.to_param
     assert_response :success
   end
 
   test "should update product" do
-    put :update, id: @product, product: @update
+    put :update, id: @product.to_param, product: @update
     assert_redirected_to product_path(assigns(:product))
   end
 
@@ -59,7 +59,7 @@ class ProductsControllerTest < ActionController::TestCase
 
   test "should destroy product" do
     assert_difference('Product.count', -1) do
-      delete :destroy, id: @product
+      delete :destroy, id: @product.to_param
     end
 
     assert_redirected_to products_path
