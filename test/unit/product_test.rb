@@ -9,6 +9,7 @@
 require 'test_helper'
 
 class ProductTest < ActiveSupport::TestCase
+<<<<<<< HEAD
   test "product attributes must not be empty" do
     product = Product.new
     assert product.invalid?
@@ -78,4 +79,9 @@ class ProductTest < ActiveSupport::TestCase
                  product.errors[:title].join('; ')
   end
   
+=======
+  # test "the truth" do
+  #   assert true
+  # end
+>>>>>>> parent of be0f833... Validation!
 end
