@@ -7,6 +7,7 @@
 # Visit http://www.pragmaticprogrammer.com/titles/rails4 for more book information.
 #---
 class Product < ActiveRecord::Base
+<<<<<<< HEAD
   has_many :line_items
 
   before_destroy :ensure_not_referenced_by_any_line_item
@@ -33,4 +34,7 @@ class Product < ActiveRecord::Base
         return false
       end
     end
+=======
+  attr_accessible :description, :image_url, :price, :title
+>>>>>>> parent of be0f833... Validation!
 end
